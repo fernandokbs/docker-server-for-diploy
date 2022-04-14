@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  server:
+    build: .
+    tty: true
+    container_name: server
+    ports:
+     - 22:22
+     - 3307:3306
+     - 80:80
+    volumes:
+     - .:/src 

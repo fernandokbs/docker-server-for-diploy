@@ -1,0 +1,6 @@
+# SSH Server using Ubuntu 20.04
+
+# Create the image
+
+* docker build -t ssh .
+* docker run -d -P --name ssh always --rm ssh
