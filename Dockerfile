@@ -21,9 +21,13 @@ EXPOSE 22 3306 80
 
 RUN apt-get update
 
-RUN apt-get install apt-utils curl python2 python-is-python2 nginx redis-server supervisor mysql-server -y
+RUN apt-get install apt-utils nano curl python2 python-is-python2 nginx redis-server supervisor mysql-server cron -y
 
 COPY entrypoint.sh /usr/bin/entrypoint
+
+COPY script.sh /
+
+RUN chmod +x /script.sh
 
 RUN chmod +x /usr/bin/entrypoint
 
