@@ -5,6 +5,7 @@ services:
     build: .
     tty: true
     container_name: server
+    restart: always
     ports:
      - 22:22
      - 3307:3306
